@@ -4,7 +4,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 # Declare your gem's dependencies in isale.gemspec.
 # Bundler will treat runtime dependencies like base dependencies, and
 # development dependencies will be added by default to the :development group.
-gemspec
 
 gem 'rails', '~> 6.0.0.beta3'
 # Use Puma as the app server

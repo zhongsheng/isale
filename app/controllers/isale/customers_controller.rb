@@ -56,7 +56,7 @@ module Isale
 
       # Only allow a trusted parameter "white list" through.
       def customer_params
-        params.require(:customer).permit(:name, :credential)
+        params.require(:customer).permit(:name, :credential, :content)
       end
   end
 end
