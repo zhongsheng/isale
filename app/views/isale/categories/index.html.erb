@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+<table>
+  <thead>
+    <tr>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @categories.each do |category| %>
+      <tr>
+        <td><%= category.name %></td>
+        <td><%= link_to t('Show'), category %></td>
+        <!-- <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to t('add'), new_category_path %>

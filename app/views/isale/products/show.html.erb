@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<h2>
+    <%= @product.name %>
+</h2>
+
+<div>
+    <%= @product.content %>
+</div>
+
+<div>
+    <%= render @product.tags %>
+</div>
+<% if current_user.present? %>
+
+    <%= link_to t('Edit'), edit_product_path(@product), class: 'btn-primary btn' %>
+<% end %>

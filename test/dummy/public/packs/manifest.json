@@ -1,24 +1,94 @@
 {
-  "application.js": "/packs/js/application-0a8a17f89375e303691d.js",
-  "application.js.map": "/packs/js/application-0a8a17f89375e303691d.js.map",
+  "application.js": "/packs/js/application-e20371e216b338b7e19a.js",
+  "application.js.map": "/packs/js/application-e20371e216b338b7e19a.js.map",
   "entrypoints": {
     "application": {
       "js": [
-        "/packs/js/application-0a8a17f89375e303691d.js"
+        "/packs/js/application-e20371e216b338b7e19a.js"
       ],
       "js.map": [
-        "/packs/js/application-0a8a17f89375e303691d.js.map"
+        "/packs/js/application-e20371e216b338b7e19a.js.map"
+      ]
+    },
+    "isale": {
+      "js": [
+        "/packs/js/isale-abbb8bb5caf974e947e0.js"
+      ],
+      "js.map": [
+        "/packs/js/isale-abbb8bb5caf974e947e0.js.map"
+      ]
+    },
+    "isale/_custom": {
+      "js": [
+        "/packs/js/isale/_custom-0f1210f60d1faaf8dbf6.js"
+      ],
+      "js.map": [
+        "/packs/js/isale/_custom-0f1210f60d1faaf8dbf6.js.map"
+      ]
+    },
+    "isale/controllers/cus_controller": {
+      "js": [
+        "/packs/js/isale/controllers/cus_controller-865728fb7a18f85d6551.js"
+      ],
+      "js.map": [
+        "/packs/js/isale/controllers/cus_controller-865728fb7a18f85d6551.js.map"
+      ]
+    },
+    "isale/controllers/hello_controller": {
+      "js": [
+        "/packs/js/isale/controllers/hello_controller-88913fc7aec16b189c10.js"
+      ],
+      "js.map": [
+        "/packs/js/isale/controllers/hello_controller-88913fc7aec16b189c10.js.map"
+      ]
+    },
+    "isale/controllers/index": {
+      "js": [
+        "/packs/js/isale/controllers/index-e8497da630348fadb99b.js"
+      ],
+      "js.map": [
+        "/packs/js/isale/controllers/index-e8497da630348fadb99b.js.map"
+      ]
+    },
+    "isale/main": {
+      "js": [
+        "/packs/js/isale/main-5fa00c0af9076ea923de.js"
+      ],
+      "js.map": [
+        "/packs/js/isale/main-5fa00c0af9076ea923de.js.map"
       ]
     },
     "testme": {
       "js": [
-        "/packs/js/testme-6cd8793ee3966654329b.js"
+        "/packs/js/testme-bc31e6081bee41baffcb.js"
       ],
       "js.map": [
-        "/packs/js/testme-6cd8793ee3966654329b.js.map"
+        "/packs/js/testme-bc31e6081bee41baffcb.js.map"
+      ]
+    },
+    "trix_upload_qiniu": {
+      "js": [
+        "/packs/js/trix_upload_qiniu-ba7de7d40982ee6cef1c.js"
+      ],
+      "js.map": [
+        "/packs/js/trix_upload_qiniu-ba7de7d40982ee6cef1c.js.map"
       ]
     }
   },
-  "testme.js": "/packs/js/testme-6cd8793ee3966654329b.js",
-  "testme.js.map": "/packs/js/testme-6cd8793ee3966654329b.js.map"
+  "isale.js": "/packs/js/isale-abbb8bb5caf974e947e0.js",
+  "isale.js.map": "/packs/js/isale-abbb8bb5caf974e947e0.js.map",
+  "isale/_custom.js": "/packs/js/isale/_custom-0f1210f60d1faaf8dbf6.js",
+  "isale/_custom.js.map": "/packs/js/isale/_custom-0f1210f60d1faaf8dbf6.js.map",
+  "isale/controllers/cus_controller.js": "/packs/js/isale/controllers/cus_controller-865728fb7a18f85d6551.js",
+  "isale/controllers/cus_controller.js.map": "/packs/js/isale/controllers/cus_controller-865728fb7a18f85d6551.js.map",
+  "isale/controllers/hello_controller.js": "/packs/js/isale/controllers/hello_controller-88913fc7aec16b189c10.js",
+  "isale/controllers/hello_controller.js.map": "/packs/js/isale/controllers/hello_controller-88913fc7aec16b189c10.js.map",
+  "isale/controllers/index.js": "/packs/js/isale/controllers/index-e8497da630348fadb99b.js",
+  "isale/controllers/index.js.map": "/packs/js/isale/controllers/index-e8497da630348fadb99b.js.map",
+  "isale/main.js": "/packs/js/isale/main-5fa00c0af9076ea923de.js",
+  "isale/main.js.map": "/packs/js/isale/main-5fa00c0af9076ea923de.js.map",
+  "testme.js": "/packs/js/testme-bc31e6081bee41baffcb.js",
+  "testme.js.map": "/packs/js/testme-bc31e6081bee41baffcb.js.map",
+  "trix_upload_qiniu.js": "/packs/js/trix_upload_qiniu-ba7de7d40982ee6cef1c.js",
+  "trix_upload_qiniu.js.map": "/packs/js/trix_upload_qiniu-ba7de7d40982ee6cef1c.js.map"
 }

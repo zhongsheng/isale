@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<h2>
+    <strong>
+        <%= @tag.category.name %>
+    </strong>
+</h2>
+
+<h3>
+    <%= @tag.name %>
+    <%= render @tag.category.tags %>
+</h3>
+
+<%= will_paginate @product_tags %>
+<div class="card-columns text-center">
+    <%= render @products  %>
+</div>
+<%= will_paginate @product_tags %>

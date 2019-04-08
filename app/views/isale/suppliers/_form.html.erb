@@ -1,0 +1,47 @@
+<%= form_with(model: supplier, local: true) do |form| %>
+  <% if supplier.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(supplier.errors.count, "error") %> prohibited this supplier from being saved:</h2>
+
+      <ul>
+      <% supplier.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="input-group mb-3">
+      <div class="input-group-prepend">
+          <%= form.label :company, class: "input-group-text" %>
+      </div>
+      <%= form.text_field :company, class: "form-control" %>
+  </div>
+
+  <div class="input-group mb-3">
+      <div class="input-group-prepend">
+          <%= form.label :name, class: "input-group-text" %>
+      </div>
+      <%= form.text_field :name, class: "form-control" %>
+  </div>
+
+  <div class="input-group mb-3">
+      <div class="input-group-prepend">
+          <%= form.label :address, class: "input-group-text" %>
+      </div>
+      <%= form.text_field :address, class: "form-control" %>
+  </div>
+
+  <div class="input-group mb-3">
+      <div class="input-group-prepend">
+
+          <%= form.label :phone, class: "input-group-text" %>
+      </div>
+      <%= form.number_field :phone, class: "form-control" %>
+  </div>
+
+  <div class="input-group mb-3">
+    <%= form.submit %>
+  </div>
+<% end %>

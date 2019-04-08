@@ -1,0 +1,78 @@
+<%= form_with(model: product, local: true) do |form| %>
+    <% if product.errors.any? %>
+        <div id="error_explanation">
+            <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+            <ul>
+                <% product.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <%= form.label :name, class: "input-group-text"  %>
+        </div>
+        <%= form.text_field :name, class: "form-control" %>
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <%= form.label :market_price, class: "input-group-text" %>
+        </div>
+        <%= form.number_field :market_price, class: "form-control" %>
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <%= form.label :wholesale_price, class: "input-group-text" %>
+        </div>
+        <%= form.number_field :wholesale_price, class: "form-control" %>
+    </div>
+    <div data-controller="tags" data-tags-url="/tags.json?category_id=">
+        <div class="input-group mb-3">
+            <%= form.select :category_id,
+                Isale::Category.all.collect{|cata| [cata.name, cata.id]},
+                {:include_blank => t('Select.category')},
+                {'data-action' => "change->tags#category",
+                 class: "form-control"
+                }
+            %>
+            <%=link_to "添加分类", new_category_path, class: "btn btn-primary" %>
+        </div>
+
+        <span data-target="tags.output">
+            <%= render 'tags_checkbox', tags: product.tags  %>
+        </span>
+        <%=link_to "添加标签",
+        categories_path,
+        class: "",
+            'data-target' => "tags.edit"
+
+        %>
+
+    </div>
+
+
+    <div class="input-group mb-3">
+        <%= form.select :contry_id,
+            Isale::Contry.all.collect {|cata| [cata.name, cata.id]},
+            {include_blank: t('Select.contry')}, {class: "form-control"}
+        %>
+        <%=link_to "添加国家", new_contry_path, class: "btn btn-primary" %>
+    </div>
+    <div class="input-group mb-3">
+        <%= form.select :supplier_id,
+            Isale::Supplier.all.collect {|cata| [cata.company, cata.id]},
+            { include_blank: t('Select.supplier')}, {class: "form-control"}
+        %>
+        <%=link_to "添加供应商", new_supplier_path, class: "btn btn-primary" %>
+    </div>
+    <div>
+        <%= form.rich_text_area :content %>
+    </div>
+
+    <div class="actions input-group mb-3">
+        <%= form.submit %>
+    </div>
+<% end %>
