@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title><%= t('site_title') %></title>
+        <%= csrf_meta_tags %>
+        <%= csp_meta_tag %>
+        <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+        <style>
+         @media (min-width: 768px) {
+             .bd-placeholder-img-lg {
+                 font-size: 3.5rem;
+             }
+         }
+         body {
+             font-size: .875rem;
+         }
+
+        </style>
+    </head>
+    <body class="isale-body">
+        <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+            <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#"><%= t('site_title') %></a>
+            <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+            <ul class="navbar-nav px-3">
+                <li class="nav-item text-nowrap">
+                    <% if current_user.present? %>
+                        <%=link_to "登出", logout_path, method: :delete, class: "btn btn-outline-primary" %>
+                    <% else %>
+                        <%=link_to "登入", login_path, class: "btn btn-outline-primary" %>
+                    <% end %>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="container-fluid">
+            <div class="row">
+                <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                    <div class="sidebar-sticky">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <%=link_to root_path, class: "nav-link" do %>
+                                    <i class="fas fa-home"></i> 首页
+                                <% end %>
+                            </li>
+                            <li class="nav-item">
+                                <%=link_to categories_path, class: "nav-link" do %>
+                                    <i class="fas fa-layer-group"></i> 分类
+                                <% end %>
+                            </li>
+                            <li class="nav-item">
+                                <%=link_to contries_path, class: "nav-link" do %>
+                                    <i class="fas fa-globe-asia"></i> 地区
+                                <% end %>
+
+                            </li>
+                            <li class="nav-item">
+                                <% if current_user.present? %>
+                                    <%=link_to new_import_path, class: "nav-link" do %>
+                                        <i class="fas fa-file-upload"></i> 导入产品
+                                    <% end %>
+
+                                    <%=link_to new_product_path, class: "nav-link" do %>
+
+                                        <i class="fas fa-plus-square"></i> 添加产品
+                                <% end %>
+
+                                <% end %>
+                            </li>
+                        </ul>
+
+                        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                            <span>TODO</span>
+                            <a class="d-flex align-items-center text-muted" href="#">
+                                <span data-feather="plus-circle"></span>
+                            </a>
+                        </h6>
+                        <ul class="nav flex-column mb-2">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    TODO
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                    <i class="fas fa-igloo"></i>
+                    <i class="fas fa-igloo"></i>
+                    <span class="fas fa-igloo"></span>
+                    <h2><%= @title %></h2>
+                    <%= yield %>
+                </main>
+            </div>
+        </div>
+    </body>
+</html>

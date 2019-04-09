@@ -1,94 +1,84 @@
 {
-  "application.js": "/packs/js/application-53dd159b5ef7f4cd1b87.js",
-  "application.js.map": "/packs/js/application-53dd159b5ef7f4cd1b87.js.map",
+  "application.js": "/packs/js/application-07a40806ae76fbff427d.js",
+  "application.js.map": "/packs/js/application-07a40806ae76fbff427d.js.map",
   "entrypoints": {
     "application": {
       "js": [
-        "/packs/js/application-53dd159b5ef7f4cd1b87.js"
+        "/packs/js/application-07a40806ae76fbff427d.js"
       ],
       "js.map": [
-        "/packs/js/application-53dd159b5ef7f4cd1b87.js.map"
-      ]
-    },
-    "isale": {
-      "js": [
-        "/packs/js/isale-abbb8bb5caf974e947e0.js"
-      ],
-      "js.map": [
-        "/packs/js/isale-abbb8bb5caf974e947e0.js.map"
+        "/packs/js/application-07a40806ae76fbff427d.js.map"
       ]
     },
     "isale/_custom": {
       "js": [
-        "/packs/js/isale/_custom-0f1210f60d1faaf8dbf6.js"
+        "/packs/js/isale/_custom-66d4adb9ec69aaf87ba6.js"
       ],
       "js.map": [
-        "/packs/js/isale/_custom-0f1210f60d1faaf8dbf6.js.map"
+        "/packs/js/isale/_custom-66d4adb9ec69aaf87ba6.js.map"
       ]
     },
     "isale/controllers/hello_controller": {
       "js": [
-        "/packs/js/isale/controllers/hello_controller-26bb68fac3baa851b3f8.js"
+        "/packs/js/isale/controllers/hello_controller-e1b1fd70cb2e985c15ec.js"
       ],
       "js.map": [
-        "/packs/js/isale/controllers/hello_controller-26bb68fac3baa851b3f8.js.map"
+        "/packs/js/isale/controllers/hello_controller-e1b1fd70cb2e985c15ec.js.map"
       ]
     },
     "isale/controllers/index": {
       "js": [
-        "/packs/js/isale/controllers/index-0ec1cd6a64f8ead55ad1.js"
+        "/packs/js/isale/controllers/index-9cb1452de5017e8a68f6.js"
       ],
       "js.map": [
-        "/packs/js/isale/controllers/index-0ec1cd6a64f8ead55ad1.js.map"
+        "/packs/js/isale/controllers/index-9cb1452de5017e8a68f6.js.map"
       ]
     },
     "isale/controllers/tags_controller": {
       "js": [
-        "/packs/js/isale/controllers/tags_controller-673a2118ad3eefcac13c.js"
+        "/packs/js/isale/controllers/tags_controller-7c6aad0c0d822cb3ae97.js"
       ],
       "js.map": [
-        "/packs/js/isale/controllers/tags_controller-673a2118ad3eefcac13c.js.map"
+        "/packs/js/isale/controllers/tags_controller-7c6aad0c0d822cb3ae97.js.map"
       ]
     },
     "isale/main": {
       "js": [
-        "/packs/js/isale/main-5fa00c0af9076ea923de.js"
+        "/packs/js/isale/main-9356046721086b2c4b35.js"
       ],
       "js.map": [
-        "/packs/js/isale/main-5fa00c0af9076ea923de.js.map"
+        "/packs/js/isale/main-9356046721086b2c4b35.js.map"
       ]
     },
-    "testme": {
+    "isale/src/dashboard": {
       "js": [
-        "/packs/js/testme-bc31e6081bee41baffcb.js"
+        "/packs/js/isale/src/dashboard-caa455473a0fb0465fa3.js"
       ],
       "js.map": [
-        "/packs/js/testme-bc31e6081bee41baffcb.js.map"
+        "/packs/js/isale/src/dashboard-caa455473a0fb0465fa3.js.map"
       ]
     },
     "trix_upload_qiniu": {
       "js": [
-        "/packs/js/trix_upload_qiniu-ba7de7d40982ee6cef1c.js"
+        "/packs/js/trix_upload_qiniu-c17ff85c51307d43d45d.js"
       ],
       "js.map": [
-        "/packs/js/trix_upload_qiniu-ba7de7d40982ee6cef1c.js.map"
+        "/packs/js/trix_upload_qiniu-c17ff85c51307d43d45d.js.map"
       ]
     }
   },
-  "isale.js": "/packs/js/isale-abbb8bb5caf974e947e0.js",
-  "isale.js.map": "/packs/js/isale-abbb8bb5caf974e947e0.js.map",
-  "isale/_custom.js": "/packs/js/isale/_custom-0f1210f60d1faaf8dbf6.js",
-  "isale/_custom.js.map": "/packs/js/isale/_custom-0f1210f60d1faaf8dbf6.js.map",
-  "isale/controllers/hello_controller.js": "/packs/js/isale/controllers/hello_controller-26bb68fac3baa851b3f8.js",
-  "isale/controllers/hello_controller.js.map": "/packs/js/isale/controllers/hello_controller-26bb68fac3baa851b3f8.js.map",
-  "isale/controllers/index.js": "/packs/js/isale/controllers/index-0ec1cd6a64f8ead55ad1.js",
-  "isale/controllers/index.js.map": "/packs/js/isale/controllers/index-0ec1cd6a64f8ead55ad1.js.map",
-  "isale/controllers/tags_controller.js": "/packs/js/isale/controllers/tags_controller-673a2118ad3eefcac13c.js",
-  "isale/controllers/tags_controller.js.map": "/packs/js/isale/controllers/tags_controller-673a2118ad3eefcac13c.js.map",
-  "isale/main.js": "/packs/js/isale/main-5fa00c0af9076ea923de.js",
-  "isale/main.js.map": "/packs/js/isale/main-5fa00c0af9076ea923de.js.map",
-  "testme.js": "/packs/js/testme-bc31e6081bee41baffcb.js",
-  "testme.js.map": "/packs/js/testme-bc31e6081bee41baffcb.js.map",
-  "trix_upload_qiniu.js": "/packs/js/trix_upload_qiniu-ba7de7d40982ee6cef1c.js",
-  "trix_upload_qiniu.js.map": "/packs/js/trix_upload_qiniu-ba7de7d40982ee6cef1c.js.map"
+  "isale/_custom.js": "/packs/js/isale/_custom-66d4adb9ec69aaf87ba6.js",
+  "isale/_custom.js.map": "/packs/js/isale/_custom-66d4adb9ec69aaf87ba6.js.map",
+  "isale/controllers/hello_controller.js": "/packs/js/isale/controllers/hello_controller-e1b1fd70cb2e985c15ec.js",
+  "isale/controllers/hello_controller.js.map": "/packs/js/isale/controllers/hello_controller-e1b1fd70cb2e985c15ec.js.map",
+  "isale/controllers/index.js": "/packs/js/isale/controllers/index-9cb1452de5017e8a68f6.js",
+  "isale/controllers/index.js.map": "/packs/js/isale/controllers/index-9cb1452de5017e8a68f6.js.map",
+  "isale/controllers/tags_controller.js": "/packs/js/isale/controllers/tags_controller-7c6aad0c0d822cb3ae97.js",
+  "isale/controllers/tags_controller.js.map": "/packs/js/isale/controllers/tags_controller-7c6aad0c0d822cb3ae97.js.map",
+  "isale/main.js": "/packs/js/isale/main-9356046721086b2c4b35.js",
+  "isale/main.js.map": "/packs/js/isale/main-9356046721086b2c4b35.js.map",
+  "isale/src/dashboard.js": "/packs/js/isale/src/dashboard-caa455473a0fb0465fa3.js",
+  "isale/src/dashboard.js.map": "/packs/js/isale/src/dashboard-caa455473a0fb0465fa3.js.map",
+  "trix_upload_qiniu.js": "/packs/js/trix_upload_qiniu-c17ff85c51307d43d45d.js",
+  "trix_upload_qiniu.js.map": "/packs/js/trix_upload_qiniu-c17ff85c51307d43d45d.js.map"
 }

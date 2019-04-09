@@ -675,6 +675,11 @@
   resolved "http://registry.npm.taobao.org/@csstools/convert-colors/download/@csstools/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
   integrity sha1-rUldxBsS511YjG24uYNPCPoTHrc=
 
+"@fortawesome/fontawesome-free@^5.8.1":
+  version "5.8.1"
+  resolved "http://registry.npm.taobao.org/@fortawesome/fontawesome-free/download/@fortawesome/fontawesome-free-5.8.1.tgz#cbafbfe8894c4e3e3c3a9da6774e249ac1f2da8b"
+  integrity sha1-y6+/6IlMTj48Op2md04kmsHy2os=
+
 "@rails/actioncable@^6.0.0-alpha":
   version "6.0.0-alpha"
   resolved "http://registry.npm.taobao.org/@rails/actioncable/download/@rails/actioncable-6.0.0-alpha.tgz#84be50626a43fe431789243c6b13c14f922bf048"
