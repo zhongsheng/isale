@@ -1,67 +1,70 @@
-class SuppliersController < ApplicationController
-  before_action :set_supplier, only: [:show, :edit, :update, :destroy]
+require_dependency "isale/application_controller"
 
-  # GET /suppliers
-  # GET /suppliers.json
-  def index
-    @suppliers = Supplier.all
-  end
+module Isale
+  class SuppliersController < ApplicationController
+    before_action :set_supplier, only: [:show, :edit, :update, :destroy]
 
-  # GET /suppliers/1
-  # GET /suppliers/1.json
-  def show
-  end
+    # GET /suppliers
+    # GET /suppliers.json
+    def index
+      @suppliers = Supplier.all
+    end
 
-  # GET /suppliers/new
-  def new
-    @supplier = Supplier.new
-  end
+    # GET /suppliers/1
+    # GET /suppliers/1.json
+    def show
+    end
 
-  # GET /suppliers/1/edit
-  def edit
-  end
+    # GET /suppliers/new
+    def new
+      @supplier = Supplier.new
+    end
 
-  # POST /suppliers
-  # POST /suppliers.json
-  def create
-    @supplier = Supplier.new(supplier_params)
+    # GET /suppliers/1/edit
+    def edit
+    end
 
-    respond_to do |format|
-      if @supplier.save
-        format.html { redirect_to @supplier, notice: 'Supplier was successfully created.' }
-        format.json { render :show, status: :created, location: @supplier }
-      else
-        format.html { render :new }
-        format.json { render json: @supplier.errors, status: :unprocessable_entity }
+    # POST /suppliers
+    # POST /suppliers.json
+    def create
+      @supplier = Supplier.new(supplier_params)
+
+      respond_to do |format|
+        if @supplier.save
+          format.html { redirect_to @supplier, notice: 'Supplier was successfully created.' }
+          format.json { render :show, status: :created, location: @supplier }
+        else
+          format.html { render :new }
+          format.json { render json: @supplier.errors, status: :unprocessable_entity }
+        end
       end
     end
-  end
 
-  # PATCH/PUT /suppliers/1
-  # PATCH/PUT /suppliers/1.json
-  def update
-    respond_to do |format|
-      if @supplier.update(supplier_params)
-        format.html { redirect_to @supplier, notice: 'Supplier was successfully updated.' }
-        format.json { render :show, status: :ok, location: @supplier }
-      else
-        format.html { render :edit }
-        format.json { render json: @supplier.errors, status: :unprocessable_entity }
+    # PATCH/PUT /suppliers/1
+    # PATCH/PUT /suppliers/1.json
+    def update
+      respond_to do |format|
+        if @supplier.update(supplier_params)
+          format.html { redirect_to @supplier, notice: 'Supplier was successfully updated.' }
+          format.json { render :show, status: :ok, location: @supplier }
+        else
+          format.html { render :edit }
+          format.json { render json: @supplier.errors, status: :unprocessable_entity }
+        end
       end
     end
-  end
 
-  # DELETE /suppliers/1
-  # DELETE /suppliers/1.json
-  def destroy
-    @supplier.destroy
-    respond_to do |format|
-      format.html { redirect_to suppliers_url, notice: 'Supplier was successfully destroyed.' }
-      format.json { head :no_content }
+    # DELETE /suppliers/1
+    # DELETE /suppliers/1.json
+    def destroy
+      @supplier.destroy
+      respond_to do |format|
+        format.html { redirect_to suppliers_url, notice: 'Supplier was successfully destroyed.' }
+        format.json { head :no_content }
+      end
     end
-  end
 
-  private
+    private
     # Use callbacks to share common setup or constraints between actions.
     def set_supplier
       @supplier = Supplier.find(params[:id])
@@ -71,4 +74,5 @@ class SuppliersController < ApplicationController
     def supplier_params
       params.require(:supplier).permit(:company, :name, :address, :phone)
     end
+  end
 end

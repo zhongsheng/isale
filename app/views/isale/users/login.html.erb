@@ -1,0 +1,10 @@
+<%= form_with model: Isale::User.new, url: login_path, class: "form-signin" do |form| %>
+    <!-- <img class="mb-4" src="/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"> -->
+    <h1 class="h3 mb-3 font-weight-normal"><%= t('.title') %></h1>
+
+    <%= form.text_field :name, class: 'form-control', placeholder: t('.name'), required: true %>
+    <%= form.password_field :password, class: 'form-control', placeholder: t('.password'), required: true %>
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit"><%= t('.submit') %></button>
+    <p class="mt-5 mb-3 text-muted">&copy; 2018-2021</p>
+<% end %>

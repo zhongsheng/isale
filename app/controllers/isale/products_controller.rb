@@ -3,7 +3,7 @@ require_dependency "isale/application_controller"
 module Isale
   class ProductsController < ApplicationController
     before_action :set_product, only: [:show, :edit, :update, :destroy]
-    # skip_before_action :authenticate_user!, only: [:show]
+    skip_before_action :authenticate_user!, only: [:show]
     before_action :set_title
 
     # GET /products

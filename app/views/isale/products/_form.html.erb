@@ -29,7 +29,7 @@
         </div>
         <%= form.number_field :wholesale_price, class: "form-control" %>
     </div>
-    <div data-controller="tags" data-tags-url="/tags.json?category_id=">
+    <div data-controller="tags" data-tags-url="/isale/tags.json?category_id=">
         <div class="input-group mb-3">
             <%= form.select :category_id,
                 Isale::Category.all.collect{|cata| [cata.name, cata.id]},
