@@ -127,4 +127,9 @@
         vertical-align: middle;
     }
 
+    .pagination {
+        span, em, a {
+            padding: 5px;
+        }
+    }
 }

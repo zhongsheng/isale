@@ -48,6 +48,7 @@ zh-CN:
         password_confirmation: "密码确认"
       isale/product:
         name: "产品名称"
+        weight: "规格"
         market_price: "市场价"
         wholesale_price: "批发价"
         category: "分类"

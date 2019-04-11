@@ -61,21 +61,25 @@
                                     <i class="fas fa-globe-asia"></i> 地区
                                 <% end %>
                             </li>
-                            <li class="nav-item">
-                                <%=link_to suppliers_path, class: "nav-link" do %>
-                                    <i class="fas fa-parachute-box"></i> 供应商
-                                <% end %>
-                            </li>
-                            <li class="nav-item">
-                                <%=link_to users_path, class: "nav-link" do %>
-                                    <i class="fas fa-user-tie"></i> 管理人员
-                                <% end %>
-                            </li>
-                            <li class="nav-item">
-                                <%=link_to customers_path, class: "nav-link" do %>
-                                    <i class="fas fa-user-friends"></i> 客户管理
-                                <% end %>
-                            </li>
+                            <% if admin? %>
+                                <li class="nav-item">
+                                    <%=link_to suppliers_path, class: "nav-link" do %>
+                                        <i class="fas fa-parachute-box"></i> 供应商
+                                    <% end %>
+                                </li>
+                                <li class="nav-item">
+                                    <%=link_to users_path, class: "nav-link" do %>
+                                        <i class="fas fa-user-tie"></i> 管理人员
+                                    <% end %>
+                                </li>
+                                <li class="nav-item">
+                                    <%=link_to customers_path, class: "nav-link" do %>
+                                        <i class="fas fa-user-friends"></i> 客户管理
+                                    <% end %>
+                                </li>
+
+                            <% end %>
+
                         </ul>
 
                         <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
@@ -85,7 +89,8 @@
                             </a>
                         </h6>
                         <ul class="nav flex-column mb-2">
-                            <li class="nav-item">
+                            <% if admin? %>
+                                <li class="nav-item">
                                     <%=link_to new_import_path, class: "nav-link" do %>
                                         <i class="fas fa-file-upload"></i> 导入产品
                                     <% end %>
@@ -95,7 +100,10 @@
                                         <i class="fas fa-plus-square"></i> 添加产品
                                     <% end %>
 
-                            </li>
+                                </li>
+
+                            <% end %>
+
                         </ul>
                     </div>
                 </nav>
@@ -103,9 +111,13 @@
                 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                         <h2><%= @title %> <span class="badge badge-secondary subtitle"> <i class="fa fa-tags"></i> <%= @subtitle %></span></h2>
-                        <div class="btn-toolbar mb-2 mb-md-0">
-                            <%= yield :tools %>
-                        </div>
+
+                        <% if admin? %>
+                            <div class="btn-toolbar mb-2 mb-md-0">
+                                <%= yield :tools %>
+                            </div>
+                        <% end %>
+
                     </div>
 
                     <div class="isale-alert-warning">

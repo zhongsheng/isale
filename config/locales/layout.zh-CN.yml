@@ -7,6 +7,7 @@ zh-CN:
     products:
       index:
         title: "产品列表"
+        product_archives: "已下架产品"
       edit:
         title: "编辑产品"
       show:
@@ -68,3 +69,10 @@ zh-CN:
         email: "邮箱"
         password: "密码"
         name: "帐号"
+      index:
+        title: "人员管理"
+      new:
+        title: "添加人员"
+    customers:
+      index:
+        title: "客户管理"

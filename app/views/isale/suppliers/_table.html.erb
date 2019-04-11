@@ -1,0 +1,32 @@
+<table class="table table-hover table-dark">
+    <thead>
+        <tr>
+            <th>
+                <%= Isale::Supplier.human_attribute_name :company %>
+            </th>
+            <th>
+                <%= Isale::Supplier.human_attribute_name :name %>
+            </th>
+            <th>
+                <%= Isale::Supplier.human_attribute_name :address %>
+            </th>
+            <th>
+                <%= Isale::Supplier.human_attribute_name :phone %>
+            </th>
+            <th>#</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% @suppliers.each do |supplier| %>
+            <tr>
+                <td><%= supplier.company %></td>
+                <td><%= supplier.name %></td>
+                <td><%= supplier.address %></td>
+                <td><%= supplier.phone %></td>
+                <td>
+                <%= link_to t('Edit'), edit_supplier_path(supplier) %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>

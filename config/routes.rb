@@ -1,8 +1,12 @@
 Isale::Engine.routes.draw do
+  # API
+  namespace :v1 do
+    get 'products', to: 'products#index'
+  end
+
   root to: "home#index"
   resources :users
   resources :addresses
-  # TODO add customers login
   resources :customers
   resources :imports
   resources :tags

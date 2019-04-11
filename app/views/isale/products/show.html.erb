@@ -1,17 +1,14 @@
-<p id="notice"><%= notice %></p>
-
-<h2>
+<% content_for :tools do %>
+    <%=link_icon "edit", t("Edit"), edit_product_path(@product) %>
+<% end %>
+<h3>
     <%= @product.name %>
-</h2>
+</h3>
+
+<h4>
+    <%= render @product.tags %>
+</h4>
 
 <div>
     <%= @product.content %>
 </div>
-
-<div>
-    <%= render @product.tags %>
-</div>
-<% if current_user.present? %>
-
-    <%= link_to t('Edit'), edit_product_path(@product), class: 'btn-primary btn' %>
-<% end %>

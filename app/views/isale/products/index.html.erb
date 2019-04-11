@@ -1,65 +1,11 @@
 <% content_for :tools do %>
     <div class="btn-group mr-2">
-    <%=link_icon "plus-square", t('Add'), new_product_path %>
+        <%=link_icon "plus-square", t('Add'), new_product_path %>
     </div>
 
     <div class="btn-group mr-2">
-        <%=link_icon "plus-square", t('.product_archives'), products_path(hidden: true) %>
+        <%=link_icon "archive", t('.product_archives'), products_path(hidden: true) %>
     </div>
 <% end %>
 
-<table class="table table-hover table-dark">
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>
-                <%= Isale::Product.human_attribute_name :name %>
-            </th>
-            <th>
-                <%= Isale::Product.human_attribute_name :market_price %>
-            </th>
-            <th>
-                <%= Isale::Product.human_attribute_name :wholesale_price %>
-            </th>
-            <th>
-                <%= Isale::Product.human_attribute_name :contry %>
-            </th>
-            <th>
-                <%= Isale::Product.human_attribute_name :supplier %>
-            </th>
-            <th>#</th>
-        </tr>
-    </thead>
-
-    <tbody>
-        <% @products.each do |product| %>
-            <tr>
-                <td><%= product.photo_thumb %></td>
-                <td><%= product.name %></td>
-                <td><%= product.market_price %></td>
-                <td><%= product.wholesale_price %></td>
-                <td><%= product.contry.name %></td>
-                <td><%= product.supplier.company %></td>
-                <% if params[:hidden] %>
-                    <td><%= link_to t('Restore'), product_restore_path(product.id) %></td>
-                <% else %>
-                    <td><%= link_to t('Show'), product %></td>
-                    <td><%= link_to t('Edit'), edit_product_path(product) %></td>
-                    <td>
-
-                        <%= link_to t('Destroy'), product,
-                        method: :delete,
-                        remote: true,
-                        data: { confirm: 'Are you sure?' }
-                        %>
-                    </td>
-                <% end %>
-
-            </tr>
-        <% end %>
-    </tbody>
-</table>
-
-<br>
-
-<%= will_paginate @products %>
+<%= render 'table' %>

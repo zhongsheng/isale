@@ -3,7 +3,6 @@ require_dependency "isale/application_controller"
 module Isale
   class ContriesController < ApplicationController
     before_action :set_contry, only: [:show, :edit, :update, :destroy]
-    skip_before_action :authenticate_user!, only: [:show, :index]
     # GET /contries
     # GET /contries.json
     def index

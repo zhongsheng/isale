@@ -18,6 +18,11 @@ module Isale
     def current_user?(user)
       user == current_user
     end
+
+    def admin?
+      current_user && (current_user.role == 'admin')
+    end
+
     # Returns the current logged-in user (if any).
     def current_user
       if session[:user_id]

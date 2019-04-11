@@ -1,0 +1,62 @@
+<%= will_paginate @products if @products.respond_to?('total_pages') %>
+<table class="table table-hover table-dark">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>
+                <%= Isale::Product.human_attribute_name :name %>
+            </th>
+            <th>
+                <%= Isale::Product.human_attribute_name :weight %>
+            </th>
+            <th>
+                <%= Isale::Product.human_attribute_name :market_price %>
+            </th>
+            <th>
+                <%= Isale::Product.human_attribute_name :contry %>
+            </th>
+            <% if admin? %>
+                <th>
+                    <%= Isale::Product.human_attribute_name :wholesale_price %>
+                </th>
+                <th>
+                    <%= Isale::Product.human_attribute_name :supplier %>
+                </th>
+            <% end %>
+            <th>#</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% @products.each do |product| %>
+            <tr>
+                <td><%= product.photo_thumb %></td>
+                <td><%= product.name %></td>
+                <td><%= product.weight %></td>
+                <td><%= product.market_price %></td>
+                <td><%= product.contry.name %></td>
+                <% if admin? %>
+                    <td><%= product.wholesale_price %></td>
+                    <td><%= product.supplier.company %></td>
+                <% end %>
+
+                <td>
+                    <% if admin? && params[:hidden] %>
+                        <%= link_to t('Restore'), product_restore_path(product.id) %>
+                    <% elsif admin? %>
+                        <%= link_to t('Show'), product %>
+                        <%= link_to t('Edit'), edit_product_path(product) %>
+                        <%= link_to t('Destroy'), product,
+                        method: :delete,
+                        remote: true,
+                        data: { confirm: 'Are you sure?' }
+                        %>
+                    <% else %>
+                        <%= link_to t('Show'), product %>
+                    <% end %>
+                </td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
+<%= will_paginate @products if @products.respond_to?('total_pages') %>

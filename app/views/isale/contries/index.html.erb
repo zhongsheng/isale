@@ -1,3 +1,6 @@
+<% content_for :tools do %>
+    <%=link_icon "plus-square", t('Add'), new_contry_path %>
+<% end %>
 <p id="notice"><%= notice %></p>
 
 <table>
@@ -14,7 +17,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to t('add'), new_contry_path, class: 'btn-primary btn' %>

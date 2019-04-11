@@ -22,8 +22,12 @@ module Isale
     end
 
     def photo_thumb
-
-      image_tag(self.photo + '/thumb')
+      if self.photo.blank?
+        url = 'http://tmp.dzunion.cn/logo.png/thumb'
+      else
+        url = self.photo + '/thumb'
+      end
+      image_tag(url)
     end
 
     def self.hiddened
