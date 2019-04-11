@@ -7,7 +7,9 @@ Isale::Engine.routes.draw do
   resources :imports
   resources :tags
   resources :suppliers
-  resources :products
+  resources :products do
+    get 'restore', to: 'restore'
+  end
   resources :contries
   resources :categories do
     resources :tags

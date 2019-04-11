@@ -10,6 +10,8 @@ module Isale
     has_many   :product_tags
     has_many   :tags, through: :product_tags
 
+    include ActionView::Helpers::AssetTagHelper
+
     before_save do |product|
       if not product.content.blank?
         if /src="(.*)"/.match(product.content.to_s)
@@ -17,6 +19,19 @@ module Isale
           pp product.photo
         end
       end
+    end
+
+    def photo_thumb
+
+      image_tag(self.photo + '/thumb')
+    end
+
+    def self.hiddened
+      self.unscoped.where({hidden: true})
+    end
+
+    def self.restore(id)
+      self.unscoped.find(id).update({hidden: false})
     end
 
     def destroy

@@ -1,3 +1,4 @@
+# coding: utf-8
 require_dependency "isale/application_controller"
 
 module Isale
@@ -9,7 +10,18 @@ module Isale
     # GET /products
     # GET /products.json
     def index
-      @products = Product.paginate(page: params[:page], per_page: 30)
+      if params[:hidden]
+        @products = Product.hiddened.paginate(page: params[:page], per_page: 30)
+        @subtitle = "下架的产品"
+      else
+        @products = Product.paginate(page: params[:page], per_page: 30)
+      end
+
+    end
+
+    def restore
+      Product.restore(params[:product_id])
+      redirect_to products_url
     end
 
     # GET /products/1

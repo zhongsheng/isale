@@ -7,8 +7,8 @@
         <%= csrf_meta_tags %>
         <%= csp_meta_tag %>
         <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-        <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-        <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+        <%= stylesheet_pack_tag 'isale/application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_pack_tag 'isale/application', 'data-turbolinks-track': 'reload' %>
         <style>
          @media (min-width: 768px) {
              .bd-placeholder-img-lg {
@@ -47,6 +47,11 @@
                                 <% end %>
                             </li>
                             <li class="nav-item">
+                                <%=link_to products_path, class: "nav-link" do %>
+                                    <i class="fas fa-store-alt"></i> 产品
+                                <% end %>
+                            </li>
+                            <li class="nav-item">
                                 <%=link_to categories_path, class: "nav-link" do %>
                                     <i class="fas fa-layer-group"></i> 分类
                                 <% end %>
@@ -55,10 +60,32 @@
                                 <%=link_to contries_path, class: "nav-link" do %>
                                     <i class="fas fa-globe-asia"></i> 地区
                                 <% end %>
-
                             </li>
                             <li class="nav-item">
-                                <% if current_user.present? %>
+                                <%=link_to suppliers_path, class: "nav-link" do %>
+                                    <i class="fas fa-parachute-box"></i> 供应商
+                                <% end %>
+                            </li>
+                            <li class="nav-item">
+                                <%=link_to users_path, class: "nav-link" do %>
+                                    <i class="fas fa-user-tie"></i> 管理人员
+                                <% end %>
+                            </li>
+                            <li class="nav-item">
+                                <%=link_to customers_path, class: "nav-link" do %>
+                                    <i class="fas fa-user-friends"></i> 客户管理
+                                <% end %>
+                            </li>
+                        </ul>
+
+                        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                            <span>常用功能</span>
+                            <a class="d-flex align-items-center text-muted" href="#">
+                                <span data-feather="plus-circle"></span>
+                            </a>
+                        </h6>
+                        <ul class="nav flex-column mb-2">
+                            <li class="nav-item">
                                     <%=link_to new_import_path, class: "nav-link" do %>
                                         <i class="fas fa-file-upload"></i> 导入产品
                                     <% end %>
@@ -66,33 +93,25 @@
                                     <%=link_to new_product_path, class: "nav-link" do %>
 
                                         <i class="fas fa-plus-square"></i> 添加产品
-                                <% end %>
+                                    <% end %>
 
-                                <% end %>
-                            </li>
-                        </ul>
-
-                        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-                            <span>TODO</span>
-                            <a class="d-flex align-items-center text-muted" href="#">
-                                <span data-feather="plus-circle"></span>
-                            </a>
-                        </h6>
-                        <ul class="nav flex-column mb-2">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    TODO
-                                </a>
                             </li>
                         </ul>
                     </div>
                 </nav>
 
                 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-                    <i class="fas fa-igloo"></i>
-                    <i class="fas fa-igloo"></i>
-                    <span class="fas fa-igloo"></span>
-                    <h2><%= @title %></h2>
+                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                        <h2><%= @title %> <span class="badge badge-secondary subtitle"> <i class="fa fa-tags"></i> <%= @subtitle %></span></h2>
+                        <div class="btn-toolbar mb-2 mb-md-0">
+                            <%= yield :tools %>
+                        </div>
+                    </div>
+
+                    <div class="isale-alert-warning">
+                        <%= yield :notice %>
+                    </div>
+
                     <%= yield %>
                 </main>
             </div>

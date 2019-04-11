@@ -1,3 +1,5 @@
+require_dependency "isale/application_helper"
+
 module Isale
   class ApplicationController < ActionController::Base
     include Isale::UsersHelper

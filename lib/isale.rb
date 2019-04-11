@@ -10,9 +10,7 @@ module Isale
   end
 
   module ApplicationHelper
-    def current_user
-      return IsaleUser.new('admin')
-    end
+
   end
 
 end

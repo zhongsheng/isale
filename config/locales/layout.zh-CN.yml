@@ -25,6 +25,8 @@ zh-CN:
         title: "编辑分类"
       new:
         title: "添加分类"
+      create:
+        title: "添加分类"
       form:
         submit: "保存"
     tags:

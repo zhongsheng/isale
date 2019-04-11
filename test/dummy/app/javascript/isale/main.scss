@@ -1,0 +1,9 @@
+@import "./stylesheets/_custom.scss";
+@import '~bootstrap/scss/bootstrap';
+
+@import './stylesheets/dashboard.scss';
+@import './stylesheets/utily.scss';
+
+h1 {
+    color: $purple;
+}

@@ -1,84 +1,39 @@
 {
-  "application.js": "/packs/js/application-07a40806ae76fbff427d.js",
-  "application.js.map": "/packs/js/application-07a40806ae76fbff427d.js.map",
+  "application.js": "/packs/js/application-1c88aa05368011e22075.js",
+  "application.js.map": "/packs/js/application-1c88aa05368011e22075.js.map",
   "entrypoints": {
     "application": {
       "js": [
-        "/packs/js/application-07a40806ae76fbff427d.js"
+        "/packs/js/application-1c88aa05368011e22075.js"
       ],
       "js.map": [
-        "/packs/js/application-07a40806ae76fbff427d.js.map"
+        "/packs/js/application-1c88aa05368011e22075.js.map"
       ]
     },
-    "isale/_custom": {
+    "isale/application": {
       "js": [
-        "/packs/js/isale/_custom-66d4adb9ec69aaf87ba6.js"
+        "/packs/js/isale/application-475968efdce60fa9ce6e.js"
       ],
       "js.map": [
-        "/packs/js/isale/_custom-66d4adb9ec69aaf87ba6.js.map"
-      ]
-    },
-    "isale/controllers/hello_controller": {
-      "js": [
-        "/packs/js/isale/controllers/hello_controller-e1b1fd70cb2e985c15ec.js"
-      ],
-      "js.map": [
-        "/packs/js/isale/controllers/hello_controller-e1b1fd70cb2e985c15ec.js.map"
-      ]
-    },
-    "isale/controllers/index": {
-      "js": [
-        "/packs/js/isale/controllers/index-9cb1452de5017e8a68f6.js"
-      ],
-      "js.map": [
-        "/packs/js/isale/controllers/index-9cb1452de5017e8a68f6.js.map"
-      ]
-    },
-    "isale/controllers/tags_controller": {
-      "js": [
-        "/packs/js/isale/controllers/tags_controller-7c6aad0c0d822cb3ae97.js"
-      ],
-      "js.map": [
-        "/packs/js/isale/controllers/tags_controller-7c6aad0c0d822cb3ae97.js.map"
-      ]
-    },
-    "isale/main": {
-      "js": [
-        "/packs/js/isale/main-9356046721086b2c4b35.js"
-      ],
-      "js.map": [
-        "/packs/js/isale/main-9356046721086b2c4b35.js.map"
-      ]
-    },
-    "isale/src/dashboard": {
-      "js": [
-        "/packs/js/isale/src/dashboard-caa455473a0fb0465fa3.js"
-      ],
-      "js.map": [
-        "/packs/js/isale/src/dashboard-caa455473a0fb0465fa3.js.map"
-      ]
-    },
-    "trix_upload_qiniu": {
-      "js": [
-        "/packs/js/trix_upload_qiniu-c17ff85c51307d43d45d.js"
-      ],
-      "js.map": [
-        "/packs/js/trix_upload_qiniu-c17ff85c51307d43d45d.js.map"
+        "/packs/js/isale/application-475968efdce60fa9ce6e.js.map"
       ]
     }
   },
-  "isale/_custom.js": "/packs/js/isale/_custom-66d4adb9ec69aaf87ba6.js",
-  "isale/_custom.js.map": "/packs/js/isale/_custom-66d4adb9ec69aaf87ba6.js.map",
-  "isale/controllers/hello_controller.js": "/packs/js/isale/controllers/hello_controller-e1b1fd70cb2e985c15ec.js",
-  "isale/controllers/hello_controller.js.map": "/packs/js/isale/controllers/hello_controller-e1b1fd70cb2e985c15ec.js.map",
-  "isale/controllers/index.js": "/packs/js/isale/controllers/index-9cb1452de5017e8a68f6.js",
-  "isale/controllers/index.js.map": "/packs/js/isale/controllers/index-9cb1452de5017e8a68f6.js.map",
-  "isale/controllers/tags_controller.js": "/packs/js/isale/controllers/tags_controller-7c6aad0c0d822cb3ae97.js",
-  "isale/controllers/tags_controller.js.map": "/packs/js/isale/controllers/tags_controller-7c6aad0c0d822cb3ae97.js.map",
-  "isale/main.js": "/packs/js/isale/main-9356046721086b2c4b35.js",
-  "isale/main.js.map": "/packs/js/isale/main-9356046721086b2c4b35.js.map",
-  "isale/src/dashboard.js": "/packs/js/isale/src/dashboard-caa455473a0fb0465fa3.js",
-  "isale/src/dashboard.js.map": "/packs/js/isale/src/dashboard-caa455473a0fb0465fa3.js.map",
-  "trix_upload_qiniu.js": "/packs/js/trix_upload_qiniu-c17ff85c51307d43d45d.js",
-  "trix_upload_qiniu.js.map": "/packs/js/trix_upload_qiniu-c17ff85c51307d43d45d.js.map"
+  "isale/application.js": "/packs/js/isale/application-475968efdce60fa9ce6e.js",
+  "isale/application.js.map": "/packs/js/isale/application-475968efdce60fa9ce6e.js.map",
+  "media/webfonts/fa-brands-400.eot": "/packs/media/webfonts/fa-brands-400-a7b95dbd.eot",
+  "media/webfonts/fa-brands-400.svg": "/packs/media/webfonts/fa-brands-400-5bf14553.svg",
+  "media/webfonts/fa-brands-400.ttf": "/packs/media/webfonts/fa-brands-400-98b6db59.ttf",
+  "media/webfonts/fa-brands-400.woff": "/packs/media/webfonts/fa-brands-400-2ef8ba34.woff",
+  "media/webfonts/fa-brands-400.woff2": "/packs/media/webfonts/fa-brands-400-5e2f9212.woff2",
+  "media/webfonts/fa-regular-400.eot": "/packs/media/webfonts/fa-regular-400-dcce4b7f.eot",
+  "media/webfonts/fa-regular-400.svg": "/packs/media/webfonts/fa-regular-400-5eb754ab.svg",
+  "media/webfonts/fa-regular-400.ttf": "/packs/media/webfonts/fa-regular-400-65b9977a.ttf",
+  "media/webfonts/fa-regular-400.woff": "/packs/media/webfonts/fa-regular-400-427d721b.woff",
+  "media/webfonts/fa-regular-400.woff2": "/packs/media/webfonts/fa-regular-400-e6257a72.woff2",
+  "media/webfonts/fa-solid-900.eot": "/packs/media/webfonts/fa-solid-900-46e7cec6.eot",
+  "media/webfonts/fa-solid-900.svg": "/packs/media/webfonts/fa-solid-900-49279363.svg",
+  "media/webfonts/fa-solid-900.ttf": "/packs/media/webfonts/fa-solid-900-ff8d9f8a.ttf",
+  "media/webfonts/fa-solid-900.woff": "/packs/media/webfonts/fa-solid-900-a7140145.woff",
+  "media/webfonts/fa-solid-900.woff2": "/packs/media/webfonts/fa-solid-900-418dad87.woff2"
 }
