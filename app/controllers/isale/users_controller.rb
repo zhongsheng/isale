@@ -4,6 +4,7 @@ require_dependency "isale/application_controller"
 module Isale
   class UsersController < ApplicationController
     before_action :set_user, only: [:show, :edit, :update, :destroy]
+    skip_before_action :authenticate_user!, only: [:login, :session_create]
     # GET /users
     def index
       @users = User.all
