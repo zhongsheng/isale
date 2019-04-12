@@ -16,7 +16,7 @@ namespace :isale do
     # end
   end
 
-  task :assets do
+  task :copy_assets do
     puts "Copy assets"
     assets_path = File.expand_path("../../../test/dummy/app/javascript/", __FILE__)
     puts Rails.root
