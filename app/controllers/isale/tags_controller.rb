@@ -3,6 +3,7 @@ require_dependency "isale/application_controller"
 module Isale
   class TagsController < ApplicationController
     before_action :set_tag, only: [:show, :edit, :update, :destroy]
+    before_action :set_category
 
     # GET /tags
     # GET /tags.json
@@ -30,18 +31,19 @@ module Isale
     # POST /tags.json
     def create
       @tag = Tag.new(tag_params)
-      # respond_to do |format|
-      #   if @tag.save
-      #     format.html { redirect_to @tag, notice: 'Tag was successfully created.' }
-      #     format.json { render :show, status: :created, location: @tag }
-      #   else
-      #     format.html { render :new }
-      #     format.json { render json: @tag.errors, status: :unprocessable_entity }
-      #   end
-      # end
-      @tag.save
-      redirect_to Category.find(tag_params[:category_id])
-      return
+      params[:category_id] = tag_params[:category_id]
+      respond_to do |format|
+        if @tag.save
+          @tag_name = @tag.name
+          @tag = Tag.new
+          format.html { render :new, notice: 'Tag was successfully created.' }
+          format.json { render :show, status: :created, location: @tag }
+          format.js
+        else
+          format.html { render :new }
+          format.json { render json: @tag.errors, status: :unprocessable_entity }
+        end
+      end
     end
 
     # PATCH/PUT /tags/1
@@ -72,8 +74,13 @@ module Isale
 
     private
     # Use callbacks to share common setup or constraints between actions.
+    def set_category
+      @category = Category.find(params[:category_id])
+    end
+
     def set_tag
       @tag = Tag.find(params[:id])
+      @subtitle = @tag.name
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

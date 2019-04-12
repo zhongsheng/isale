@@ -69,6 +69,7 @@ module Isale
     # Use callbacks to share common setup or constraints between actions.
     def set_category
       @category = Category.find(params[:id] || params[:category_id])
+      @subtitle = @category.name
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

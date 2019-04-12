@@ -11,16 +11,17 @@ export default class extends Controller {
         }
         this.fetch_tags(category_id)
         this.edit_url = this.editTarget.href
+        this.editTarget.href = this.edit_url + `/${category_id}/tags/new`
     }
 
     category(event) {
         var category_id = event.currentTarget.value;
         this.fetch_tags(category_id)
-        this.editTarget.href = this.edit_url + '/' + category_id
+        this.editTarget.href = this.edit_url + `/${category_id}/tags/new`
     }
 
     fetch_tags(category_id){
-        fetch(this.data.get('url') + category_id)
+        fetch(this.data.get('url') + `?category_id=${category_id}`)
             .then(function(response){
                 return response.json();
             }).then( tags => { this.render(tags) } )
@@ -33,7 +34,7 @@ export default class extends Controller {
             if(this.checked_tags.includes(tag.id.to_s())){
                 checked = 'checked'
             }
-            checkboxes += `<label> <input type='checkbox' name='product_tags[]' value='${tag.id}' ${checked} /> ${tag.name} </lable> `;
+            checkboxes = checkboxes + `<span class='isale-check-tags'><label> <input type='checkbox' name='product_tags[]' value='${tag.id}' ${checked} /> ${tag.name} </lable> </span>`;
         }
         this.outputTarget.innerHTML = checkboxes;
     }

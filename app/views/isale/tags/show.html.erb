@@ -2,13 +2,12 @@
 
 <h2>
     <strong>
-        <%= @tag.category.name %>
+        <%=link_to @tag.category.name, @category %>
     </strong>
 </h2>
 
 <h3>
-    <%= @tag.name %>
-    <%= render @tag.category.tags %>
+    <%= render partial: 'tag', collection: @category.tags, locals: {category_id: params[:category_id]} %>
 </h3>
 
 <%= will_paginate @product_tags %>

@@ -35,6 +35,10 @@ zh-CN:
         title: "标签"
       show:
         title: "标签"
+      new:
+        title: "添加标签"
+      create:
+        title: "标签"
     imports:
       index:
         title: "导入记录"

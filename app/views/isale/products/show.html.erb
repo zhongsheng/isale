@@ -1,13 +1,11 @@
 <% content_for :tools do %>
     <%=link_icon "edit", t("Edit"), edit_product_path(@product) %>
 <% end %>
-<h3>
-    <%= @product.name %>
-</h3>
 
-<h4>
-    <%= render @product.tags %>
-</h4>
+<h3>
+    <%= @product.category.name %>
+    <%= render partial: 'isale/tags/tag', collection: @product.tags, locals: {category_id: @product.category_id } %>
+</h3>
 
 <div>
     <%= @product.content %>
