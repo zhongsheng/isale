@@ -8,7 +8,7 @@ namespace :isale do
     puts "Yarn install"
     `yarn --check-file`
     system "yarn install --no-progress"
-    packs = %w(@fortawesome/fontawesome-free @rails/ujs bootstrap jquery like-ruby popper.js qiniu.js stimulus trix turbolinks)
+    packs = %w(@fortawesome/fontawesome-free @rails/ujs bootstrap jquery like-ruby popper.js qiniu-js stimulus trix turbolinks)
     packs.each do |pack|
       system "yarn add #{pack}"
     end

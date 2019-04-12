@@ -1,6 +1,7 @@
 <table class="table table-hover table-dark">
     <thead>
         <tr>
+            <th>#</th>
             <th>
                 <%= Isale::Supplier.human_attribute_name :company %>
             </th>
@@ -20,6 +21,7 @@
     <tbody>
         <% @suppliers.each do |supplier| %>
             <tr>
+                <td><%= supplier.id %></td>
                 <td><%= supplier.company %></td>
                 <td><%= supplier.name %></td>
                 <td><%= supplier.address %></td>

@@ -5598,11 +5598,6 @@ qiniu-js@^2.5.4:
   resolved "http://registry.npm.taobao.org/qiniu-js/download/qiniu-js-2.5.4.tgz#9d708bbdb9b5c326a42b59900eacd6d4497c81e4"
   integrity sha1-nXCLvbm1wyakK1mQDqzW1El8geQ=
 
-qiniu.js@^0.1.2:
-  version "0.1.2"
-  resolved "http://registry.npm.taobao.org/qiniu.js/download/qiniu.js-0.1.2.tgz#a6343b46b0d6fead63363c454cff5854c37172ab"
-  integrity sha1-pjQ7RrDW/q1jNjxFTP9YVMNxcqs=
-
 qs@6.5.2, qs@~6.5.2:
   version "6.5.2"
   resolved "http://registry.npm.taobao.org/qs/download/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
