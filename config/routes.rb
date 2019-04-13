@@ -1,7 +1,9 @@
 Isale::Engine.routes.draw do
   # API
   namespace :v1 do
-    get 'products', to: 'products#index'
+    resources :products
+    get 'buy/:id', to: 'payments#buy'
+    #get 'products', to: 'products#index'
   end
 
   root to: "home#index"

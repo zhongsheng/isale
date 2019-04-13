@@ -20,14 +20,14 @@ module Isale
         end
       end
     end
+    after_find do |product|
+      if product.photo.blank?
+        product.photo = 'http://tmp.dzunion.cn/logo.png'
+      end
+    end
 
     def photo_thumb
-      if self.photo.blank?
-        url = 'http://tmp.dzunion.cn/logo.png/thumb'
-      else
-        url = self.photo + '/thumb'
-      end
-      image_tag(url)
+      image_tag(self.photo + '/thumb')
     end
 
     def self.hiddened
