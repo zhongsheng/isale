@@ -3,7 +3,8 @@ Isale::Engine.routes.draw do
   namespace :v1 do
     resources :products
     get 'buy/:id', to: 'payments#buy'
-    #get 'products', to: 'products#index'
+    get 'auth/url', to: 'auth#url'
+    get 'auth/info', to: 'auth#info'
   end
 
   root to: "home#index"

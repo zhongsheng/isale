@@ -21,14 +21,7 @@ module Isale
     def ali_pay(product)
       success_uri = 'http://test.dzunion.cn'
       return_url = 'http://test.dzunion.cn/isale/v1/pay_callback'
-      alipay_path = Rails.root.join('config','alipay')
-      @alipay_client = Alipay::Client.new(
-        url: 'https://openapi.alipay.com/gateway.do',
-        app_id: '2018111262127673',
-        app_private_key: File.read( "#{alipay_path}/rsa_private_key.pem" ),
-        alipay_public_key: File.read("#{alipay_path}/rsa_public_key.pem"),
-      )
-      return @alipay_client.page_execute_form(
+      return Alipay.rails_client.page_execute_form(
         method: 'alipay.trade.wap.pay',
         return_url: success_uri,
         notify_url: return_url,
